@@ -14,7 +14,10 @@ class RedisController extends Controller
         // $user = Redis::get('name');
 
         // $conn = Redis::connection();
-        // dd($user, $conn);
-        echo env('QUEUE_CONNECTION');
+        // dd($conn);
+        // echo env('QUEUE_CONNECTION');
+
+        $db = new \PDO("sqlsrv:Server=54.233.240.192,1433", "admin", "k4hvdq9tj9");
+        dd($db);
     }
 }
